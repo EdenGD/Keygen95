@@ -20,6 +20,8 @@ There are 2 functions inside the keygen95.py file. `generateRetail()` and `gener
 # Algorithm
 The Windows 95 key checker is stupidly simple, *especially* for Retail copies. To start of, let's look at the latter.
 
+### Retail
+
 `XXX-YYYYYYY`
 
 The first 3 characters are only checked with a simple blacklist. This means that they cannot be one of the following: `333`, `444`, `555`, `666`, `777`, `888`, `999`.
@@ -29,6 +31,8 @@ The last 7 characters are checked using an algorithm most commonly referred to a
 The thing about the key validator in RTM copies is that it doesn't account for few things. First of all, the 3 digits at the beginning are *only* checked with the blacklist. This means that the installer doesn't check if they're even a number at all. The dash right after is also completely unchecked at all, which all of this combined with the nature of the mod7 algorithm, let's us create abominations of a key like `SEX-6666666` or `0000000000` that are technically considered "valid" Windows 95 keys.
 
 The check in OEM copies is unfortunately (or fortunately depending on how you look at it) more strict and complicated than the RTM one, leaving less room for fun. That said, here's the structure of the key:
+
+### OEM
 
 `DDDYY-OEM-SSSSSSS-RRRRR`
 
